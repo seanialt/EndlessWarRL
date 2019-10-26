@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>EndlessWarRL</Name>
     <RootNamespace>EndlessWarRL</RootNamespace>
+    <InterpreterId>MSBuild|rougelike|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,46 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="console\console.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="console\console_cfg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="console\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="EndlessWarRL.py" />
+    <Compile Include="entity\entity.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="entity\entity_cfg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="entity\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="input_handlers.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="rougelike\">
+      <Id>rougelike</Id>
+      <Version>3.6</Version>
+      <Description>rougelike (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="console\" />
+    <Folder Include="entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="console\arial10x10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
