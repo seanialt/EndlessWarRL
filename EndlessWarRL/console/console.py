@@ -1,6 +1,10 @@
+#stuff i didnt make
 import tcod as libtcod
+import tcod.event as libtcod_event
 
+#cfgs
 import console.console_cfg
+
 
 def rootStartUp():
 
@@ -12,17 +16,7 @@ def rootStartUp():
 
 def mainConStartUp(root):
 	
-	player_x = int(console.console_cfg.screen_width / 2)
-	player_y = int(console.console_cfg.screen_width / 2)
-
 	con = libtcod.console.Console(console.console_cfg.screen_width, console.console_cfg.screen_height)
-
-	con.draw_rect(
-		player_x, 
-		player_y,  
-		1, 1,
-		ord('@'),
-		fg=libtcod.white)
 	
 	con.blit(root)
 

@@ -44,6 +44,27 @@
     <Compile Include="input_handlers.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="map\game_map.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="map\map_cfg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="map\tile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="map\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="render\render_cfg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="render\render_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="render\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="rougelike\">
@@ -59,6 +80,8 @@
   <ItemGroup>
     <Folder Include="console\" />
     <Folder Include="entity\" />
+    <Folder Include="render\" />
+    <Folder Include="map\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="console\arial10x10.png" />
