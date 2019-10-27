@@ -17,10 +17,7 @@ class GameMap:
 		self.tiles = self.initialize_tiles()
 
 	def initialize_tiles(self):
-		tiles = [[Tile(False) for y in range (self.height)] for x in range(self.width)]
-
-		tiles[30][22].blocked = True
-		tiles[30][22].block_sight = True
+		tiles = [[Tile(True) for y in range (self.height)] for x in range(self.width)]
 
 		return tiles
 

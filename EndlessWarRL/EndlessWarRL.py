@@ -2,6 +2,8 @@
 import tcod as libtcod
 import tcod.event as libtcod_event
 
+
+
 #cfgs
 import console.console_cfg
 import entity.entity_cfg
@@ -22,8 +24,8 @@ def main():
 	entities = entity.entity_cfg.entities
 
 	colours = {
-		'dark_wall': libtcod.Color(0, 0, 100),
-		'dark_ground': libtcod.Color(50, 50, 150)
+		'dark_wall': libtcod.Color(0, 0, 0),
+		'dark_ground': libtcod.Color(5, 10, 5)
     }
 
 	#mkae root console
@@ -34,7 +36,7 @@ def main():
 	game_map = GameMap(map.map_cfg.map_width, map.map_cfg.map_height)
 
 	while True:
-		for event in libtcod_event.wait():
+		for event in libtcod_event.wait(1):
 			if event.type == "QUIT":
 				raise SystemExit()
 
@@ -44,7 +46,7 @@ def main():
 
 				libtcod.console_flush()
 
-				clear_all(con, entities)
+				clear_all(con, entities, colours)
 
 				if event.type == "MOUSEBUTTONDOWN":
 					if event.button == libtcod_event.BUTTON_LEFT:

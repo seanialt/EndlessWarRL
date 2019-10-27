@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>68336fd0-796c-465b-b2d2-3c1de52ab7b7</TargetProject>
+    <FriendlyName>EndlessWarRL</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\seani\AppData\Local\Temp\EndlessWarRL_20191027.vsp</Filename>
+    </Report>
+    <Report>
+      <Filename>C:\Users\seani\AppData\Local\Temp\EndlessWarRL_20191027(1).vsp</Filename>
+    </Report>
+  </Reports>
+</ProfilingTarget>
